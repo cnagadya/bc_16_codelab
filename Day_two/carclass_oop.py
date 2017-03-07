@@ -1,43 +1,44 @@
-class Car:
-  #default values
-  num_of_doors = 4
-  num_of_wheels = 4
-  type = 'saloon'
-  name = 'General'
-  model = 'GM'
+class Car():
   
+  #car properties
+  def __init__(self, name = 'General' , model = 'GM' , car_type = 'saloon'):
+    self.name = name
+    self.model = model
+    self.car_type = car_type 
+
+    #setting the doors no.
+    if self.name == 'Porshe' or  self.name == 'Koenigsegg':
+      self.num_of_doors = 2
+    else:
+      self.num_of_doors = 4
   
-  #default properties
-  def __init__(self, model, name):
-    self.model = 'model'
-    self.name = 'name'
+
+    #setting the wheel no.
+    if self.car_type == 'trailer':
+      self.num_of_wheels = 8
+    else:
+      self.num_of_wheels = 4
+      
+    
+    
+          
+  
+honda = Car(name ='Honda')
+
+toyota = Car(name ='Toyota', model = 'Corolla')
+
+opel = Car(name ='Opel',  model = 'Omega 3')
+
+porshe = Car(name ='Porshe',  model = '911 Turbo')
+
+koenigsegg = Car(name ='Koenigsegg', model = 'Agera R')
 
 
+  
 
-class honda(Car):
-  name = 'Honda'
-  
-class toyota(Car): 
-  name = 'Toyota'
-  model = 'Corola'
-
-
-class opel(Car):
-  name = 'Opel'
-  model = 'Omega 3'
-  
-class porshe(Car):
-  name = 'Porshe'
-  model = '911 Turbo'
-  num_of_wheels = 2
-  
-  
-class koenigsegg(Car):  
-  name = 'Koenigsegg'
-  model = 'Agera R'
-  num_of_wheels = 2
 
 print toyota.model
 
 print honda.model
-print koenigsegg.num_of_wheels
+print honda.num_of_doors
+print porshe.num_of_doors
