@@ -14,7 +14,8 @@ class InputTestCase(unittest.TestCase):
         self.assertFalse(prime_generator_fn(-10))
     def test_fn_true_for_positive_number(self):
         """The input should be an interger and positive"""
-        self.assertFalse(prime_generator_fn(10))
+        result = prime_generator_fn(10)
+        self.assertTrue(prime_generator_fn(10), result)
     def test_input_must_be_greater_than_one(self):
         """Input is not one. There are no prime numbers between 0 and 1"""
         self.assertNotEqual(7,1)
