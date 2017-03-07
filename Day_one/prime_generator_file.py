@@ -6,12 +6,10 @@ def prime_generator_fn(n):
 		"""Condition 1 for prime: Must be greater than 1"""
 		if num > 1:
 			"""Condition 2 for prime: remainder if divided by any other number other than itself and 1"""	
-			for i in range(2,num):
-				if (num % i==0):
+			for inner_num in range(2,num):
+				if (num % inner_num==0):
 					break
 		        else:
 		        	prime_num = num
 			    	print(prime_num)
 	
-
-prime_generator_fn(16)
