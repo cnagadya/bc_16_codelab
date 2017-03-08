@@ -7,10 +7,14 @@ def words(input_string):
   #splitting string into list to enable iteration
   words_list = input_string.split()
 
-  #iterate through the list to check for the
+  #iterate through the list to check for the words
   for word in words_list:
-  	#print (words_list.count(word))
-  	words_dict[word] = words_list.count(word)
+
+  	#check if the word is a number
+  	if word.isdigit():
+  		word = int(word) 
+  	
+  	words_dict[word] = words_list.count(str(word))
   print words_dict
 
   	
