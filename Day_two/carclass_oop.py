@@ -1,10 +1,14 @@
-class Car():
+""" Car class to instatiate various vehicles"""
+class Car(object):
   
   #car properties
   def __init__(self, name = 'General' , model = 'GM' , car_type = 'saloon'):
     self.name = name
     self.model = model
-    self.car_type = car_type 
+    self.car_type = car_type
+    #self.speed = 0 #speed initially 0, ie when parked
+    self.speed = 0
+    
 
     #setting the doors no.
     if self.name == 'Porshe' or  self.name == 'Koenigsegg':
@@ -19,9 +23,23 @@ class Car():
     else:
       self.num_of_wheels = 4
       
-    
-    
-          
+  #for the saloon cars    
+  def is_saloon(self):
+    if self.car_type != 'trailer':
+      return True
+  
+  
+  #speed when pedal is hit using 
+  def drive(self, drive_gear):
+  
+    if self.car_type == 'trailer':
+      self.speed = 7*drive_gear
+      
+    else:
+      self.speed = 10**drive_gear
+      
+    return self
+      
   
 honda = Car(name ='Honda')
 
