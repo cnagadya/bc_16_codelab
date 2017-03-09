@@ -1,16 +1,21 @@
-def binary_search(array, target):
-  lower = 0
-  upper = len(array)
-  while lower < upper:   # use < instead of <=
-    x = lower + (upper - lower) // 2
-    val = array[x]
-    if target == val:
-      return x
-    elif target > val:
-      if lower == x:   # this two are the actual lines
-        break        # you're looking for
-      lower = x
-    elif target < val:
-      upper = x
+def binarySearch(alist, item):
+    first = 0
+    last = len(alist)-1
+    found = False
+   
+    while first<=last and not found:
+        midpoint = (first + last)//2
+        if alist[midpoint] == item:
+            found = True
 
-binary_search([1,5,8,10], 5)
+        else:
+            if item < alist[midpoint]:
+                last = midpoint-1
+            else:
+                first = midpoint+1
+  
+    return found
+  
+testlist = [0, 1, 2, 8, 13, 17, 19, 32, 42,]
+print(binarySearch(testlist, 3))
+print(binarySearch(testlist, 13))
