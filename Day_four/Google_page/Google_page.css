@@ -1,3 +1,6 @@
+
+/*Style sheet for the google home page*/
+
 .wrap_div{position: absolute;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50%);width:100%;}
 
 .logoContainer{text-align: center}
