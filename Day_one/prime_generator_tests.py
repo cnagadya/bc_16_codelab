@@ -6,7 +6,9 @@ class InputTestCase(unittest.TestCase):
     def test_raises_error_for_nonnumeric_arg(self):
         """The input should be a number not string"""
         #self.assertRaises(TypeError, prime_generator_fn, "four")
-        self.assertRaises(TypeError, lambda: prime_generator_fn("four"), "n should be an integer not string")
+        with self.assertRaises(TypeError):
+            prime_generator_fn("four")
+            #self.assertRaises(TypeError, lambda: prime_generator_fn("four"), "n should be an integer not string")
     def test_fn_runs_for_numeric_arg(self):
         """The input should be an interger"""
         self.assertIsInstance(prime_generator_fn(4), int)

@@ -16,3 +16,5 @@ def prime_generator_fn(n):
 			        	prime_num = num
 				    	print(prime_num)
 	
+
+
