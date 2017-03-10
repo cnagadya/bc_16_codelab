@@ -12,3 +12,12 @@
 
 .searchContainer{margin-top:20px; text-align: center}
 .searchbox{padding:10px;border:1px solid #cecece;min-width:60%;}
+
+.lowerButtons {text-align: center;margin-top:20px;}
+.lowerButtons input{text-align: center;height: 36px;line-height: 27px;background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    color: #757575;
+    cursor: default;
+    font-family: arial,sans-serif;
+    font-size: 13px;font-weight: bold}
